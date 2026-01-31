@@ -4,6 +4,8 @@ set -e
 php artisan config:cache || true
 php artisan route:cache  || true
 php artisan view:cache   || true
+php artisan migrate --force || true
+
 
 # If you want auto-migrations on every deploy, uncomment:
 # php artisan migrate --force || true
