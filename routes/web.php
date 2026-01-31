@@ -24,7 +24,9 @@ use App\Http\Controllers\Admin\TransactionController;
 use App\Http\Controllers\PaymentWebhookController;
 
 // Home
-Route::get('/', fn() => redirect()->route('login'));
+Route::get('/', function () {
+    return view('welcome');
+});
 
 // Login
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
